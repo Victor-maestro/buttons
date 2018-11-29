@@ -281,7 +281,7 @@ h1, h2, h3, h4
     &:active
       color: #fff
     
-/* third-line  -  вторая строка */
+/* third-line  -  третья строка */
 .container--third-line
   background-color: #bbdefb
   
@@ -338,6 +338,9 @@ h1, h2, h3, h4
         left: 200px
         transition: .6s ease-in-out
       
+    &:active
+      color: #b3e5fc  
+    
   .button-9
     display: inline-block
     margin: 10px 20px
@@ -357,8 +360,11 @@ h1, h2, h3, h4
       box-shadow: 0 0 0 0 rgba(0,40,120,0)
       background-position: 0 0
 
-/* bottom-line  -  вторая строка */
-.container--bottom-line
+    &:active
+      color: #1e88e5
+    
+/* fourth-line  -  четвёртая строка */
+.container--fourth-line
   background-color: #c8e6c9
   
 .button-10
@@ -366,8 +372,8 @@ h1, h2, h3, h4
   display: inline-block
   padding: 15px 30px
   text-decoration: none
-  color: #2fc989
-  border: 4px solid #2fc989
+  color: #4db6ac
+  border: 4px solid #4db6ac
   font-size: 14px
   text-transform: uppercase
   letter-spacing: .4em
@@ -396,7 +402,7 @@ h1, h2, h3, h4
       left: -210%
       width: 200%
       height: 108%
-      background: #2fc989
+      background: #4db6ac
       transform: skew(-15deg,0)
       transition: .5s
  
@@ -406,10 +412,10 @@ h1, h2, h3, h4
     z-index: -1
     top: 50%
     left: -1000%
+    width: 400%
     height: 3px
     margin-top: -1px
-    width: 400%
-    background: #2fc989
+    background: #4db6ac
     transition: .5s
 
   &:hover
@@ -421,8 +427,42 @@ h1, h2, h3, h4
     span
       &::before 
         left: -25%
-     
+    
+  &:active
+    &::after
+      background: #009688
+    span
+      &::before 
+        background: #009688
+  
 .button-11
+  position: relative
+  display: inline-block
+  padding: 15px 30px
+  color: #616161
+  font-weight: bold
+  text-decoration: none
+  text-transform: uppercase
+  text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px
+  background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)), linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)), linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)), linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)), linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5))
+  background-repeat: no-repeat
+  background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px
+  background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px)
+  box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px
+
+  &:hover
+    color: #757575
+    background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px)
+    transition: .5s linear
+    
+  &:active
+    top: 2px
+
+/* bottom-line  -  нижняя строка (круглые кнопки) */
+.container--bottom-line
+  background-color: #bdbdbd
+  
+.button-12
   position: relative
   z-index: 10
   width: 80px
@@ -472,7 +512,13 @@ h1, h2, h3, h4
     height: 36px
     transition: .5s ease-in-out
     animation: opsimple 3s infinite
-
+  
+  &:active
+    border-color: #ff8a65
+  
+    span
+      color: #ff7043
+  
 /* анимация кнопки */    
 @keyframes hoverWaves
   0%
@@ -497,7 +543,7 @@ h1, h2, h3, h4
   
 /* конец кнопки обратной связи */    
     
-.button-12
+.button-13
   position: relative
   z-index: 10
   width: 80px
@@ -587,5 +633,50 @@ h1, h2, h3, h4
   
 /* конец кнопки звонка */
 
+.button-14
+  position: relative
+  width: 70px
+  height: 70px
+  background-image: linear-gradient(top, #f4f1ee, #fff)
+  border-radius: 50%
+  border: none
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5)
+  transition: all .1s linear
+
+  &::after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    display: block
+    width: 45px
+    height: 35px
+    color: #e9e6e4
+    font-size: 30px
+    text-decoration: none
+    text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px #ffffff
+    transform: translate(-50%, -50%)
+    
+  &:hover
+    background-image: linear-gradient(top, #fff, #f4f1ee)
+    color: #0088cc
+
+  &:active
+    background-image: linear-gradient(top, #efedec, #f7f4f4)
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5)
+    
+    &::after
+      color: #dbd2d2
+      text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white
+  
+.ok
+  &::after
+    content: "OK!"
+  
+  &:hover
+    &::after
+      color: #8bc34a
+      text-shadow: 0px 0px 6px #83d244
+  
   
 @import "media" // Всегда в конце
